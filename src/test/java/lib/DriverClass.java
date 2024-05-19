@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -45,6 +46,12 @@ public class DriverClass {
     public String getPageTitle(String expectedTitle) {
         wait.until(ExpectedConditions.titleContains(expectedTitle));
         return this.driver.getTitle();
+    }
+
+    public void buttonClickWithJavascriptExecutor(String xpath) {
+        JavascriptExecutor js = (JavascriptExecutor) this.driver;
+        WebElement button = this.waitVisibilityAndFindElement(xpath);
+        js.executeScript("arguments[0].click();", button);
     }
 
     public WebElement waitVisibilityAndFindElement(String xpath) {

@@ -104,8 +104,8 @@ public class TestRunner {
             case SUCCESSFUL_OPEN_PRODUCT_PAGE:
                 this.successfulOpenProductPage();
                 break;
-            case NAVIGATE_TO_MAIN_PAGE_FROM_PRODUCT_PAGE:
-                this.navigateToMainPageFromProductPage();
+            case PRODUCT_HAS_SCREENSHOT:
+                this.productHasScreenshot();
                 break;
             default:
                 throw new IllegalArgumentException("Invalid test name: " + nextTest);
@@ -186,6 +186,7 @@ public class TestRunner {
     }
 
     private String createdListName = null;
+
     private void createNewListInSaveAssetsPage() {
         createdListName = this.getRandomText(10);
 
@@ -215,8 +216,7 @@ public class TestRunner {
         Assert.assertTrue(productPage.getActualURL("packages").contains("packages"));
     }
 
-    private void navigateToMainPageFromProductPage() {
-        productPage.NavigateMainPage();
-        Assert.assertTrue(mainPage.getTitle(Config.mainPageTitle).contains(Config.mainPageTitle));
+    private void productHasScreenshot() {
+        Assert.assertTrue(productPage.productHasScreenshot());
     }
 }

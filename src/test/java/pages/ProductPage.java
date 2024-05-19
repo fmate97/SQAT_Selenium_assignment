@@ -10,7 +10,7 @@ public class ProductPage extends BasePage {
         super(driver);
     }
 
-    public void NavigateMainPage() {
-        this.buttonClick(XPaths.HomeButtonInProductPage);
+    public Boolean productHasScreenshot(){
+        return this.isDisplayed(XPaths.ScreenshotInProductPage);
     }
 }

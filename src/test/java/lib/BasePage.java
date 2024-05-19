@@ -39,6 +39,10 @@ public class BasePage {
         this.driver.waitVisibilityAndFindElement(buttonXPath).click();
     }
 
+    protected void buttonClickWithJavascriptExecutor(String buttonXPath) {
+        this.driver.buttonClickWithJavascriptExecutor(buttonXPath);
+    }
+
     protected Boolean isDisplayed(String webElementXPath) {
         return this.driver.waitVisibilityAndFindElement(webElementXPath).isDisplayed();
     }

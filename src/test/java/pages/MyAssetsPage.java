@@ -15,6 +15,6 @@ public class MyAssetsPage extends BasePage {
     }
 
     public void OpenProductPage() {
-        this.buttonClick(XPaths.ProductCardInMyAssetsPage);
+        this.buttonClickWithJavascriptExecutor(XPaths.ProductCardInMyAssetsPage);
     }
 }

@@ -36,5 +36,5 @@ public class XPaths {
 
     public static final String ProductCardInMyAssetsPage = "//div[@class = '_2_Hn8 _3zauv']";
 
-    public static final String HomeButtonInProductPage = "//a[@data-reactid = '14']";
+    public static final String ScreenshotInProductPage = "//img[@alt = 'screenshot']";
 }

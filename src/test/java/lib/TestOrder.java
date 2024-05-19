@@ -27,5 +27,5 @@ public class TestOrder {
             TestOrderEnum.DELETE_CREATED_LIST_IN_OWN_LIST_PAGE,
             TestOrderEnum.SUCCESSFUL_OPEN_MY_ASSETS_PAGE,
             TestOrderEnum.SUCCESSFUL_OPEN_PRODUCT_PAGE,
-            TestOrderEnum.NAVIGATE_TO_MAIN_PAGE_FROM_PRODUCT_PAGE);
+            TestOrderEnum.PRODUCT_HAS_SCREENSHOT);
 }
